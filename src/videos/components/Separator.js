@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, StyleSheet as estilos} from 'react-native';
+import {View, StyleSheet as estilos} from 'react-native';
 
 export const VerticalSeparator = ({color}) => {
   return <View style={[style.container, {borderTopColor: color && color}]} />;

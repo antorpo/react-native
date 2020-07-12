@@ -27,13 +27,13 @@ export const Header = ({children}) => {
 */
 const styles = StyleSheet.create({
   logo: {
-    width: 80,
-    height: 26,
-    resizeMode: 'contain',
+    width: 150,
+    height: 50,
   },
   container: {
-    paddingVertical: 10,
-    paddingHorizontal: 10,
+    alignItems: 'center',
+    paddingRight: 10,
+    paddingBottom: 10,
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
