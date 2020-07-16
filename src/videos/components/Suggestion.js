@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, Image, Text, StyleSheet as estilos} from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 export const Suggestion = ({
   title,
@@ -19,7 +20,10 @@ export const Suggestion = ({
       <View style={style.right}>
         <Text style={style.title}>{title}</Text>
         <Text style={style.year}>{year}</Text>
-        <Text style={style.rating}>{`Rating: ${rating}`}</Text>
+        <View style={style.rateContainer}>
+          <Text style={style.rating}>{`Rating: ${rating}`}</Text>
+          <Icon name="star" size={18} color="#ebba34" />
+        </View>
       </View>
     </View>
   );
@@ -61,6 +65,7 @@ const style = estilos.create({
     color: '#6b6b6b',
     fontSize: 16,
     fontWeight: 'bold',
+    paddingRight: 5,
   },
   genreContainer: {
     alignSelf: 'flex-start',
@@ -70,6 +75,9 @@ const style = estilos.create({
   genre: {
     color: 'white',
     fontSize: 16,
+  },
+  rateContainer: {
+    flexDirection: 'row',
   },
 });
 

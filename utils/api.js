@@ -8,6 +8,12 @@ class Api {
     const {data} = await response.json();
     return data.movies;
   };
+
+  getMovies = async () => {
+    const response = await fetch(`${BASE_API}/list_movies.json`);
+    const {data} = await response.json();
+    return data.movies;
+  };
 }
 
 // Exportamos una instancia.
